@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class UfvController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('getUfvs');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -71,7 +76,8 @@ class UfvController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ufv = Ufv::find($id);
+        return view('ufv/ufv-edit',compact('ufv'));
     }
 
     /**
@@ -83,7 +89,7 @@ class UfvController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd($request->all(), $id);
     }
 
     /**
@@ -94,7 +100,9 @@ class UfvController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ufv = Ufv::find($id);
+        $ufv->delete();
+        return redirect('ufvs/');
     }
 
     public function getUfvs()

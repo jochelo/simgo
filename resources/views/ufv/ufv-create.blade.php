@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="offset-3 col-lg-6">
+            <div class="col-lg-6 offset-lg-3">
                 <br>
                 <div class="card">
                     <div class="card-header">
@@ -14,7 +14,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="ufv_fecha">Fecha</label>
-                                <input type="date" id="ufv_fecha" name="ufv_fecha"
+                                <input type="date" id="ufv_fecha" name="ufv_fecha" value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}"
                                        class="form-control @error('ufv_fecha') is-invalid @enderror">
                                 @error('ufv_fecha')
                                 <div class="alert alert-danger">{{ $message }}</div>

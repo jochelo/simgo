@@ -24,7 +24,7 @@
                             <th>Ufv</th>
                             <th>Dolar</th>
                             <th>Euro</th>
-                            <!--<th>Acciones</th>-->
+                            <th>Acciones</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -35,7 +35,7 @@
                                 <td>{{ $ufv->ufv_valor }}</td>
                                 <td>{{ $ufv->dolar_valor }}</td>
                                 <td>{{ $ufv->euro_valor }}</td>
-                                <!--<td>
+                                <td>
                                     <div class="btn-group">
                                         <a class="btn btn-border-none btn-sm btn-outline-success "
                                            href="{{ url('ufvs/'.$ufv->idufv.'/edit') }}"
@@ -54,7 +54,7 @@
                                             </button>
                                         </form>
                                     </div>
-                                </td>-->
+                                </td>
                             </tr>
                         @endforeach
                         </tbody>
