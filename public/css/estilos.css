@@ -1,0 +1,8 @@
+.sidebar-img {
+    display: block;
+    width: 200px;/*/273px;//283px;*/
+/* height:283px;//274px;*/
+    margin: 0 auto;/*0 auto;*/
+    padding: 0;
+    border: 0;
+}
