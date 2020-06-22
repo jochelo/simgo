@@ -10,18 +10,20 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {!!Html::script('js/app.js')!!}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">
+    {!!Html::style('css/app.css')!!}
+    {!!Html::style('css/estilos.css')!!}
+    <!--<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/estilos.css') }}" rel="stylesheet">-->
 
     <!--Icons-->
-    <link href="{{ asset('fontawesome-free-5.13.1-web/css/all.min.css') }}" rel="stylesheet">
+    {!!Html::style('fontawesome-free-5.13.1-web/css/all.min.css')!!}
 </head>
 <body>
 <div id="app">
