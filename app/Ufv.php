@@ -3,11 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Ufv extends Model
 {
-    use SoftDeletes;
+    // use SoftDeletes;
     protected $table = 'ufvs';
     protected $primaryKey = 'idufv';
     protected $fillable = [
@@ -17,5 +16,5 @@ class Ufv extends Model
         'euro_valor'
     ];
 
-    protected $dates=['deleted_at'];
+    // protected $dates=['deleted_at'];
 }

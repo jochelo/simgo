@@ -20,7 +20,7 @@ class CreateUfvsTable extends Migration
             $table->float('dolar_valor',6,2);
             $table->float('euro_valor',6,2);
 
-            $table->softDeletes();
+            // $table->softDeletes();
             $table->timestamps();
         });
     }
